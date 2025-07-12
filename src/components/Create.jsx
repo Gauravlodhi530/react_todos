@@ -1,9 +1,13 @@
 import { nanoid } from "nanoid";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { todocontext } from "./wrapper";
+
+
+
 const Create = (props) => {
-  const todos = props.todos;
-  const settodos = props.settodos;
+ const [todos, settodos] = useContext(todocontext)
 
   const {
     register,
